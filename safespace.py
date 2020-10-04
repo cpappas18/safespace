@@ -11,16 +11,16 @@ from imutils.video import VideoStream
 from imutils.video import FPS
 
 # user variables
-videopath = '/Users/chloepappas/Documents/GitHub/mais2020/example_video.mp4'
-prototxt = '/Users/chloepappas/Documents/GitHub/mais2020/mobilenet_ssd/MobileNetSSD_deploy.prototxt'
-modelpath = '/Users/chloepappas/Documents/GitHub/mais2020/mobilenet_ssd/MobileNetSSD_deploy.caffemodel'
-outputpath = '/Users/chloepappas/Documents/GitHub/mais2020/output_video.mp4'
+videopath = # PATH TO INPUT VIDEO
+prototxt = './mobilenet_ssd/MobileNetSSD_deploy.prototxt'
+modelpath = './mobilenet_ssd/MobileNetSSD_deploy.caffemodel'
+outputpath = # PATH TO OUTPUT VIDEO 
 conf = 0.4 # confidence value
 skip_frames = 30
 
 # capacity
-cur_inside = 5 
-max_capacity = 6
+cur_inside = 0
+max_capacity = 10 
 
 # load our serialized model from disk
 print("[INFO] loading model...")
@@ -42,11 +42,11 @@ trackers = []
 trackableObjects = {}
 
 # number of people that have entered or exited 
-totalFrames = 0
 outgoing = 0
 incoming = 0
 
 # start the frames per second throughput estimator
+totalFrames = 0
 fps = FPS().start()
 
 # loop over frames from the video stream
