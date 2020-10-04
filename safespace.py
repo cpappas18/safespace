@@ -11,10 +11,10 @@ from imutils.video import VideoStream
 from imutils.video import FPS
 
 # user variables
-videopath = # PATH TO INPUT VIDEO
+videopath = './example_video.mp4' # PATH TO INPUT VIDEO
+outputpath = './output_video.mp4' # PATH TO OUTPUT VIDEO
 prototxt = './mobilenet_ssd/MobileNetSSD_deploy.prototxt'
 modelpath = './mobilenet_ssd/MobileNetSSD_deploy.caffemodel'
-outputpath = # PATH TO OUTPUT VIDEO 
 conf = 0.4 # confidence value
 skip_frames = 30
 
